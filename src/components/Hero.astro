@@ -4,28 +4,29 @@ import { Icon } from 'astro-icon'
 const { src = '/astronaut-hero-img.webp' } = Astro.props
 ---
 
-<section class="hero my-24">
+<section class="hero my-8">
   <div class="container">
     <div class="grid grid-cols-1 items-center gap-24 lg:grid-cols-2">
       <div class="flex flex-col items-center gap-8 md:items-start">
-        <h1 class="text-center text-6xl md:text-left lg:text-8xl">
-          <slot><span class="text-gradient">Accessible</span> Starter for Astro</slot>
+        <h1 class="text-center text-6xl md:text-left lg:text-7xl">
+          <slot><span class="text-gradient">Imagination</span> Driven Tech🚀</slot>
         </h1>
+        <h2 class="subtext" >Let's Bring Your <span class="secondary-text-gradient text-emphasis">Ideas</span> to Life</h2>
         <div class="flex flex-col gap-3 min-[500px]:flex-row">
-          <a class="button has-icon" href="https://github.com/markteekman/accessible-astro-starter">
-            <Icon pack="ion" name="star-outline" />
-            Star on GitHub
+          <a class="button has-icon full-width" href="https://github.com/markteekman/accessible-astro-starter">
+            <Icon pack="ion" name="planet" />
+            Schedule a Meeting
           </a>
           <a
-            class="button has-icon color-secondary"
+            class="button has-icon color-secondary full-width"
             href="https://github.com/markteekman/accessible-astro-starter/blob/main/README.md"
           >
-            <Icon pack="ion" name="bookmark-outline" />
-            Read the Docs
+            <Icon pack="ion" name="rocket-outline" />
+            Let's Get Started
           </a>
         </div>
       </div>
-      <img class="hidden lg:block" src={src} alt="" decoding="async" />
+      <img class="hidden md:block" src={src} alt="" decoding="async" />
     </div>
   </div>
 </section>
@@ -40,6 +41,35 @@ const { src = '/astronaut-hero-img.webp' } = Astro.props
 
   :global(.darkmode .text-gradient) {
     background: linear-gradient(315deg, var(--primary-200) 25%, var(--secondary-400));
+    background-clip: border-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .secondary-text-gradient{
+    background: linear-gradient(90deg, var(--style-100) 0%, var(--style-200) 50%, var(--style-300) 100%);
+    background-clip: border-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .text-emphasis{
+    font-size: 150%;
+    font-weight: 800;
+    border-bottom: 4px;
+  border-style: solid;
+  border-image: linear-gradient(to right, hsl(266, 80%, 69%), hsl(279, 81%, 75%),hsl(18, 96%, 80%),) 1;
+    text-transform: uppercase;
+  }
+  .subtext{
+    color: var(--neutral-700);
+    font-weight: 600;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+
+  }
+  :global(.darkmode .secondary-text-gradient) {
+    background: linear-gradient(90deg, var(--style-100) 0%, var(--style-200) 50%, var(--style-300) 100%);
     background-clip: border-box;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
