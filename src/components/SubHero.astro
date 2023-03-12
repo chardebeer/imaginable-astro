@@ -1,0 +1,76 @@
+---
+import { Icon } from 'astro-icon'
+
+const { src = '/astronaut-hero-img.webp' } = Astro.props
+---
+
+<section class="my-2 subcontainer">
+  <div class="container center">
+   <h2 class="subhero">
+    Ready to take your business to the <span class="text-gradient text-emphasis">next level?</span> 🚀
+   </h2>
+   <p class="bigger">     Do you want to stand out in the crowded digital landscape? Then look no further than Imaginable Tech! We’re a digital agency that specializes in web design, UI/UX design, marketing, print design, SEO, and Google services. Our team of creative experts uses cutting-edge technology and out-of-the-box thinking to bring your wildest ideas to life.
+</p>
+  </div>
+</section>
+
+<style lang="scss">
+    .subcontainer{
+        margin: 0 auto;
+        padding: 1rem 2rem;
+    }
+    .subhero{
+        font-size: 2.6rem;
+        font-weight: 600;
+    }
+.center{
+    text-overflow: clip;
+}
+
+    .bigger{
+        margin: 1rem 0 0 0;
+        font-size: 1.5rem;
+        line-height: 150%;
+        padding-right: 10%;
+    }
+  .text-gradient {
+    background: linear-gradient(315deg, var(--primary-200) 25%, var(--secondary-500));
+    background-clip: border-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  :global(.darkmode .text-gradient) {
+    background: linear-gradient(315deg, var(--primary-200) 25%, var(--secondary-400));
+    background-clip: border-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .secondary-text-gradient{
+    background: linear-gradient(90deg, var(--style-100) 0%, var(--style-200) 50%, var(--style-300) 100%);
+    background-clip: border-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .text-emphasis{
+    font-size: 120%;
+    font-weight: 800;
+    border-bottom: 4px;
+    text-transform: uppercase;
+  }
+  .subtext{
+    color: var(--neutral-700);
+    font-weight: 600;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+
+  }
+  :global(.darkmode .secondary-text-gradient) {
+    background: linear-gradient(90deg, var(--style-100) 0%, var(--style-200) 50%, var(--style-300) 100%);
+    background-clip: border-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+</style>
