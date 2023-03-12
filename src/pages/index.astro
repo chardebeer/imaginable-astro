@@ -1,6 +1,7 @@
 ---
 import DefaultLayout from '../layouts/DefaultLayout.astro'
 import Hero from '../components/Hero.astro'
+import SubHero from '../components/SubHero.astro'
 import Feature from '../components/Feature.astro'
 import Counter from '../components/Counter.astro'
 import ContentMedia from '../components/ContentMedia.astro'
@@ -10,10 +11,10 @@ import { Accordion, AccordionItem, Card, Modal} from 'accessible-astro-component
 
 <DefaultLayout title="Home">
   <Hero />
+  <SubHero/>
   
-  <section class="my-64">
+  <section class="my-10">
     <div class="container">
-      <h2 class="mb-16 text-6xl">Features</h2>
       <div class="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-3">
         <Feature icon="mdi:tailwind" title="Tailwind CSS">
           Use the power of Tailwind to greatly improve your productivity and enhance your developer workflow.
